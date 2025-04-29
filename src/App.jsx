@@ -10,31 +10,31 @@ import { registerPopups, parseCategoryList, parseCountryList, createPopupHTML } 
 // Icon configuration for different categories
 const categoryIcons = {
   // Exact matches as specified in the configuration
-  'Arms control':                  { id: 'icon-arms-control',            url: '/icons/icon-arms-control.png' },
-  'Cultural Diplomacy (Defence)':  { id: 'icon-cultural-diplomacy',      url: '/icons/icon-cultural.png' },
-  'Defence Cooperation':           { id: 'icon-defence-cooperation',     url: '/icons/icon-defencecoop.png' },
-  'Defence Infrastructure':        { id: 'icon-defence-infrastructure',  url: '/icons/icon-infrastructure.png' },
-  'HADR – Disaster Response':      { id: 'icon-hadr',                    url: '/icons/icon-disaster.png' },
-  'Maritime Security':             { id: 'icon-maritime-security',       url: '/icons/icon-maritime.png' },
-  'Military Exercises':            { id: 'icon-military-exercises',      url: '/icons/icon-exercises.png' },
-  'Military Medical Diplomacy':    { id: 'icon-military-medical',        url: '/icons/icon-medical.png' },
-  'MIL-POL Engagement':            { id: 'icon-milpol',                  url: '/icons/icon-milpol.png' },
-  'MIL - POL Engagement':          { id: 'icon-milpol',                  url: '/icons/icon-milpol.png' },
-  'Public Diplomacy':              { id: 'icon-public-diplomacy',        url: '/icons/icon-public.png' },
-  'Sports Diplomacy (Defence)':    { id: 'icon-sports-diplomacy',        url: '/icons/icon-sports.png' },
-  'Training':                      { id: 'icon-training',                url: '/icons/icon-training.png' },
-  'Visit Diplomacy (Defence)':     { id: 'icon-visit-diplomacy',         url: '/icons/icon-visit.png' },
-  'Griffith':                      { id: 'icon-griffith',                url: '/icons/Griffith.png' },
+  'Arms control':                  { id: 'icon-arms-control',            url: './icons/icon-arms-control.png' },
+  'Cultural Diplomacy (Defence)':  { id: 'icon-cultural-diplomacy',      url: './icons/icon-cultural.png' },
+  'Defence Cooperation':           { id: 'icon-defence-cooperation',     url: './icons/icon-defencecoop.png' },
+  'Defence Infrastructure':        { id: 'icon-defence-infrastructure',  url: './icons/icon-infrastructure.png' },
+  'HADR – Disaster Response':      { id: 'icon-hadr',                    url: './icons/icon-disaster.png' },
+  'Maritime Security':             { id: 'icon-maritime-security',       url: './icons/icon-maritime.png' },
+  'Military Exercises':            { id: 'icon-military-exercises',      url: './icons/icon-exercises.png' },
+  'Military Medical Diplomacy':    { id: 'icon-military-medical',        url: './icons/icon-medical.png' },
+  'MIL-POL Engagement':            { id: 'icon-milpol',                  url: './icons/icon-milpol.png' },
+  'MIL - POL Engagement':          { id: 'icon-milpol',                  url: './icons/icon-milpol.png' },
+  'Public Diplomacy':              { id: 'icon-public-diplomacy',        url: './icons/icon-public.png' },
+  'Sports Diplomacy (Defence)':    { id: 'icon-sports-diplomacy',        url: './icons/icon-sports.png' },
+  'Training':                      { id: 'icon-training',                url: './icons/icon-training.png' },
+  'Visit Diplomacy (Defence)':     { id: 'icon-visit-diplomacy',         url: './icons/icon-visit.png' },
+  'Griffith':                      { id: 'icon-griffith',                url: './icons/Griffith.png' },
   
   // Add common variations that might appear in the data
-  'Cultural Diplomacy':            { id: 'icon-cultural-diplomacy',      url: '/icons/icon-cultural.png' },
-  'Sports Diplomacy':              { id: 'icon-sports-diplomacy',        url: '/icons/icon-sports.png' },
-  'Visit Diplomacy':               { id: 'icon-visit-diplomacy',         url: '/icons/icon-visit.png' },
-  'Medical Diplomacy':             { id: 'icon-military-medical',        url: '/icons/icon-medical.png' },
-  'Disaster Response':             { id: 'icon-hadr',                    url: '/icons/icon-disaster.png' },
-  'HADR':                          { id: 'icon-hadr',                    url: '/icons/icon-disaster.png' },
-  'HADR - Disaster Response':      { id: 'icon-hadr',                    url: '/icons/icon-disaster.png' },
-  'MIL POL Engagement':            { id: 'icon-milpol',                  url: '/icons/icon-milpol.png' }
+  'Cultural Diplomacy':            { id: 'icon-cultural-diplomacy',      url: './icons/icon-cultural.png' },
+  'Sports Diplomacy':              { id: 'icon-sports-diplomacy',        url: './icons/icon-sports.png' },
+  'Visit Diplomacy':               { id: 'icon-visit-diplomacy',         url: './icons/icon-visit.png' },
+  'Medical Diplomacy':             { id: 'icon-military-medical',        url: './icons/icon-medical.png' },
+  'Disaster Response':             { id: 'icon-hadr',                    url: './icons/icon-disaster.png' },
+  'HADR':                          { id: 'icon-hadr',                    url: './icons/icon-disaster.png' },
+  'HADR - Disaster Response':      { id: 'icon-hadr',                    url: './icons/icon-disaster.png' },
+  'MIL POL Engagement':            { id: 'icon-milpol',                  url: '/.icons/icon-milpol.png' }
 };
 const defaultIcon = { id: 'default', url: '/icons/default.png' };
 
