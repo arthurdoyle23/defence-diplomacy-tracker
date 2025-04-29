@@ -1,0 +1,340 @@
+/* SpiderifierStyles.css - Updated with increased marker size, taller/narrower popups, higher spiral, and centered popup text */
+
+/* Container for spiderfied markers */
+.mapboxgl-spiderifier-marker-container {
+  position: absolute;
+  z-index: 10;
+  pointer-events: auto !important;
+}
+
+/* Improved layering for hover functionality */
+.mapboxgl-canvas-container .mapboxgl-layer:last-child {
+  z-index: 2;
+}
+
+/* Styling for custom pins */
+.spider-point-circle {
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform; /* Hardware acceleration */
+}
+
+.spider-point-circle:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mapboxgl-spiderifier-marker:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Improved connecting lines */
+path.mapboxgl-spiderifier-leg-line {
+  stroke: rgba(229, 31, 48, 0.8) !important; /* Increased opacity from 0.6 */
+  stroke-width: 2px !important; /* Increased from 1.5px */
+  stroke-opacity: 0.8 !important; /* Increased from 0.7 */
+  fill: none !important;
+  stroke-dasharray: none !important;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2)) !important; /* Enhanced shadow */
+  transition: stroke-width 0.3s ease, stroke-opacity 0.3s ease !important; /* Smoother transition */
+  pointer-events: none !important;
+}
+
+path.mapboxgl-spiderifier-leg-line:hover {
+  stroke-width: 3px !important; /* Increased from 2.5px */
+  stroke-opacity: 1 !important;
+}
+
+/* Enhanced z-indexing */
+.mapboxgl-spiderifier-marker-container {
+  z-index: 9;
+}
+
+/* Improved popup layering */
+.mapboxgl-popup {
+  z-index: 100 !important; /* Increased to ensure above all other elements */
+}
+
+/* Fixed cluster styling */
+.cluster-icon {
+  background-color: #FFBF00;
+  border: 1px solid black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Fixed hover animations */
+@keyframes icon-shift {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-2px); }
+}
+
+/* Apply stable transitions to map layers */
+.mapboxgl-canvas-container .mapboxgl-layer {
+  transition: transform 0.2s ease-out;
+  will-change: transform; /* Hardware acceleration */
+}
+
+/* ========== POPUP STYLING ========== */
+
+/* Base popup styling - UPDATED FOR TALLER, NARROWER LOOK WITH CENTERED TEXT AND SLIGHT OPACITY */
+.mapboxgl-popup-content {
+  padding: 0 !important;
+  border-radius: 4px !important; /* More squared corners */
+  overflow: hidden !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  text-align: center !important;
+}
+
+/* Close button styling - UPDATED */
+.mapboxgl-popup-close-button {
+  font-size: 16px !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  padding: 4px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: none !important;
+  border-radius: 2px !important; /* More squared */
+  cursor: pointer !important;
+  top: 3px !important;
+  right: 3px !important;
+  z-index: 101 !important;
+  width: 18px !important;
+  height: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  transition: background 0.2s ease, color 0.2s ease !important;
+}
+
+.mapboxgl-popup-close-button:hover {
+  color: rgba(0, 0, 0, 0.8) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Hide default popup tip */
+.mapboxgl-popup-tip {
+  display: none !important;
+}
+
+/* Consistent font styling */
+* {
+  font-family: "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, Arial, sans-serif !important;
+}
+
+/* Popup type differentiation */
+.feature-popup .mapboxgl-popup-content {
+  animation: popup-appear 0.3s ease-out; /* Increased duration for smoother animation */
+}
+
+.hover-popup .mapboxgl-popup-content {
+  animation: popup-hover 0.2s ease-out; /* Increased duration for smoother animation */
+}
+
+/* Popup animations - UPDATED FOR SMOOTHER TRANSITIONS */
+@keyframes popup-appear {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popup-hover {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== MARKER STYLING ========== */
+
+/* Improved spiderfied popup positioning */
+.mapboxgl-spiderifier-marker-container .mapboxgl-popup {
+  margin-top: -20px !important; /* Adjusted from -15px for better placement */
+}
+
+/* Enhanced spiderfied icon interactions */
+.mapboxgl-spiderifier-marker-container .spider-leg-container {
+  transition: transform 0.3s ease-out !important; /* Smoother transition */
+  will-change: transform !important; /* Hardware acceleration */
+  pointer-events: auto !important;
+}
+
+.mapboxgl-spiderifier-marker-container .spider-leg-container:hover {
+  transform: scale(1.15) !important; /* Increased from 1.1 for more noticeable effect */
+  z-index: 11 !important;
+}
+
+/* INCREASED spiderfied icon sizing */
+.spider-leg-pin-container {
+  width: 50px !important; /* Increased from 40px */
+  height: 50px !important; /* Increased from 40px */
+  transition: transform 0.3s ease !important; /* Smoother transition */
+  will-change: transform !important; /* Hardware acceleration */
+  pointer-events: auto !important;
+}
+
+.spider-leg-pin-container:hover {
+  transform: scale(1.15) !important; /* Increased from 1.1 for more noticeable effect */
+}
+
+/* Ensure proper overflow handling */
+.mapboxgl-spiderifier-marker-container .spider-leg-container {
+  overflow: visible !important;
+}
+
+/* ========== REGULAR MARKER STYLING ========== */
+
+/* Static marker improvements */
+.mapboxgl-canvas-container {
+  z-index: 0;
+}
+
+/* Ensure proper cursor behavior */
+.mapboxgl-canvas-container canvas {
+  cursor: default;
+}
+
+/* Improved pointer event handling */
+#map-container .mapboxgl-canvas-container {
+  pointer-events: auto;
+}
+
+/* Enhanced marker hover behavior - UPDATED FOR SMOOTHER TRANSITIONS */
+.custom-marker {
+  transition: transform 0.3s ease; /* Increased from 0.2s */
+  will-change: transform; /* Hardware acceleration */
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 5;
+}
+
+.custom-marker:hover {
+  transform: scale(1.15) !important; /* Increased from 1.1 for more noticeable effect */
+  z-index: 10 !important;
+}
+
+/* Ensure consistent marker sizing - INCREASED SIZE */
+#map-container .mapboxgl-marker {
+  z-index: 5;
+  pointer-events: auto !important;
+}
+
+/* Fix for markers disappearing on hover or movement */
+#map-container .mapboxgl-marker div {
+  pointer-events: auto !important;
+}
+
+#map-container .mapboxgl-marker img {
+  width: 50px !important; /* Increased from 40px */
+  height: 50px !important; /* Increased from 40px */
+  transition: transform 0.3s ease !important; /* Smoother transition */
+  will-change: transform !important; /* Hardware acceleration */
+}
+
+#map-container .mapboxgl-marker img:hover {
+  transform: scale(1.15) !important; /* Increased from 1.1 for more noticeable effect */
+}
+
+/* Smooth opacity transitions for layers */
+.mapboxgl-canvas-container .mapboxgl-layer {
+  transition: opacity 0.3s ease; /* Increased from 0.2s */
+}
+
+/* Improved z-index for hover layer */
+#map-container .hover-layer {
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Fixed popup z-indexing */
+.mapboxgl-popup {
+  z-index: 100;
+}
+
+/* Ensure proper cursor behavior for all interactive elements */
+.mapboxgl-canvas-container canvas:hover {
+  cursor: inherit;
+}
+
+/* Stable hover states for unclustered points */
+#unclustered-point:hover {
+  cursor: pointer;
+}
+
+/* Fix absolute positioning for markers */
+.mapboxgl-marker {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  will-change: transform !important;
+  pointer-events: auto !important;
+}
+
+/* Prevent markers from being hidden by other elements */
+.mapboxgl-marker * {
+  pointer-events: auto !important;
+}
+
+/* Force hardware acceleration for all markers */
+.mapboxgl-marker {
+  transform-style: preserve-3d !important;
+  backface-visibility: hidden !important;
+}
+
+/* Fix markers disappearing on hover */
+.mapboxgl-marker:hover {
+  z-index: 20 !important;
+}
+
+/* Make sure marker elements stay visible during map movement */
+.mapboxgl-canvas-container {
+  overflow: visible !important;
+}
+
+/* Fix marker position during zoom/scroll */
+body .mapboxgl-marker {
+  transform-origin: bottom center !important;
+}
+
+/* UPDATED: Taller and narrower popup styling with CENTERED TEXT and SLIGHT OPACITY */
+body .popup-container {
+  pointer-events: auto !important;
+  z-index: 101 !important;
+  background-color: rgba(255, 255, 255, 0.9) !important; /* UPDATED: Added opacity */
+  backdrop-filter: blur(8px) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  max-width: 150px !important; /* REDUCED from 180px for narrower appearance */
+  min-height: 200px !important; /* ADDED to make popups taller */
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: center !important;
+}
+
+/* Ensure all content inside popups is centered */
+body .popup-container * {
+  text-align: center !important;
+}
+
+body .popup-container h2 {
+  text-align: center !important;
+}
+
+body .popup-container p {
+  text-align: center !important;
+}
+
+body .popup-container div {
+  text-align: center !important;
+}
+
+/* Ensure popups appear above all map elements */
+body .mapboxgl-popup {
+  z-index: 500 !important;
+}
+
+/* Fix for markers to appear above map elements but below popups */
+body .mapboxgl-marker {
+  z-index: 10 !important;
+}
