@@ -10,11 +10,11 @@ import { registerPopups, parseCategoryList, parseCountryList, createPopupHTML } 
 // Icon configuration for different categories
 const categoryIcons = {
   // Exact matches as specified in the configuration
-  'Arms control':                  { id: 'icon-arms-control',            url: './icons/icon-arms-control.png' },
+  'Arms Control':                  { id: 'icon-arms-control',            url: './icons/icon-arms-control.png' },
   'Cultural Diplomacy (Defence)':  { id: 'icon-cultural-diplomacy',      url: './icons/icon-cultural.png' },
   'Defence Cooperation':           { id: 'icon-defence-cooperation',     url: './icons/icon-defencecoop.png' },
   'Defence Infrastructure':        { id: 'icon-defence-infrastructure',  url: './icons/icon-infrastructure.png' },
-  'HADR – Disaster Response':      { id: 'icon-hadr',                    url: './icons/icon-disaster.png' },
+  'HADR - disaster response':      { id: 'icon-hadr',                    url: './icons/icon-disaster.png' },
   'Maritime Security':             { id: 'icon-maritime-security',       url: './icons/icon-maritime.png' },
   'Military Exercises':            { id: 'icon-military-exercises',      url: './icons/icon-exercises.png' },
   'Military Medical Diplomacy':    { id: 'icon-military-medical',        url: './icons/icon-medical.png' },
@@ -1067,12 +1067,12 @@ function addUnclusteredPointLayer(map) {
           [
             'match',
             ['get', 'primaryCategory'],
-            'Arms control', 'icon-arms-control',
+            'Arms Control', 'icon-arms-control',
             'Cultural Diplomacy (Defence)', 'icon-cultural-diplomacy',
             'Cultural Diplomacy', 'icon-cultural-diplomacy',
             'Defence Cooperation', 'icon-defence-cooperation',
             'Defence Infrastructure', 'icon-defence-infrastructure',
-            'HADR – Disaster Response', 'icon-hadr',
+            'HADR - disaster response', 'icon-hadr',
             'HADR - Disaster Response', 'icon-hadr',
             'HADR', 'icon-hadr',
             'Disaster Response', 'icon-hadr',
@@ -1096,7 +1096,7 @@ function addUnclusteredPointLayer(map) {
           // Check if category contains Cultural Diplomacy
           ['in', 'Cultural Diplomacy', ['var', 'category']], 'icon-cultural-diplomacy',
           // Check if category contains Arms control
-          ['in', 'Arms control', ['var', 'category']], 'icon-arms-control',
+          ['in', 'Arms Control', ['var', 'category']], 'icon-arms-control',
           // Check if category contains Defence Cooperation
           ['in', 'Defence Cooperation', ['var', 'category']], 'icon-defence-cooperation',
           // Check if category contains Defence Infrastructure
@@ -1152,12 +1152,12 @@ function addUnclusteredPointLayer(map) {
           [
             'match',
             ['get', 'primaryCategory'],
-            'Arms control', 'icon-arms-control-hover',
+            'Arms Control', 'icon-arms-control-hover',
             'Cultural Diplomacy (Defence)', 'icon-cultural-diplomacy-hover',
             'Cultural Diplomacy', 'icon-cultural-diplomacy-hover',
             'Defence Cooperation', 'icon-defence-cooperation-hover',
             'Defence Infrastructure', 'icon-defence-infrastructure-hover',
-            'HADR – Disaster Response', 'icon-hadr-hover',
+            'HADR - disaster response', 'icon-hadr-hover',
             'HADR - Disaster Response', 'icon-hadr-hover',
             'HADR', 'icon-hadr-hover',
             'Disaster Response', 'icon-hadr-hover',
@@ -1181,7 +1181,7 @@ function addUnclusteredPointLayer(map) {
           // Check if category contains Cultural Diplomacy
           ['in', 'Cultural Diplomacy', ['var', 'category']], 'icon-cultural-diplomacy-hover',
           // Check if category contains Arms control
-          ['in', 'Arms control', ['var', 'category']], 'icon-arms-control-hover',
+          ['in', 'Arms Control', ['var', 'category']], 'icon-arms-control-hover',
           // Check if category contains Defence Cooperation
           ['in', 'Defence Cooperation', ['var', 'category']], 'icon-defence-cooperation-hover',
           // Check if category contains Defence Infrastructure
@@ -1440,7 +1440,7 @@ function setupSpiderifier(map) {
     
     // If no exact match, try to match by substring
     for (const category of categories) {
-      if (category.includes('Arms')) return categoryIcons['Arms control'] || defaultIcon;
+      if (category.includes('Arms')) return categoryIcons['Arms Control'] || defaultIcon;
       if (category.includes('Cultural')) return categoryIcons['Cultural Diplomacy (Defence)'] || defaultIcon;
       if (category.includes('Defence Coop')) return categoryIcons['Defence Cooperation'] || defaultIcon;
       if (category.includes('Infrastructure')) return categoryIcons['Defence Infrastructure'] || defaultIcon;
